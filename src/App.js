@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './App.scss';
+import Header from './Header';
+import Task from './NewTask/Task'
+import TaskItem from './TaskItem/TaskItem';
+
 
 function App() {
+
+  const [buttonState,setButtonState] =useState("close")
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header setButtonState={setButtonState}/>
+      <Task currentButtonState={buttonState} />
+      
     </div>
   );
 }

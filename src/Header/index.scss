@@ -1,0 +1,25 @@
+header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    h1{
+      font-size: 30px;
+    }
+  
+    button{
+      all:unset;
+      width: 80px;
+      background-color: green;
+      height: 50px;
+      color: white;
+      padding: 0px 8px;
+      border-radius: 5px;
+    }
+
+    button:hover{
+        background-color: rgba($color:green,$alpha: 0.5);
+    }
+  }
